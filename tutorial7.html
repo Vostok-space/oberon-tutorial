@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Для чисел с плавающей точкой тоже доступны знакомые арифметические операции: сложение «<code>+</code>», вычитание «<code>-</code>», умножение «<code>*</code>», вещественное деление «<code>/</code>». Следует учитывать, что не только сами числа с плавающей точкой неточны по своей природе, но и операции с ними могут привести к дополнительной потере точности.</p>
+
+  <div id='vostokbox-button-runners'></div>
+  <div id='vostokbox-log'></div>
+
+  <div id='vostokbox-runners'></div>
+
+  <p>Поупражняйтесь в вычислении разных чисел с плавающей точкой</p>
+
+</article>
+
+<footer><a href='tutorial6.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial8.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Out.Real(2.0 + 3.0, 0)', 'Out.Real(2.0 - 3.0, 0)', 'Out.Real(2.0 * 3.0, 0)', 'Out.Real(2.0 / 3.0, 0)'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>

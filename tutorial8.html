@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Помимо встроенных в язык операций (сложение, умножение,...) в выражениях есть возможность вызывать произвольные функции. Функции в Oberon — это процедуры, которые возвращают значение. Как правило, возвращаемое значение является результатом определённых вычислений над входными параметрами функции.</p>
+
+  <div id='vostokbox-button-runners'></div>
+  <div id='vostokbox-log'></div>
+
+  <div id='vostokbox-runners'></div>
+
+  <p>В модуле Math есть функция power для возведения в степень. Возведите, к примеру, 2.0 в степень 10.0 и наоборот.</p>
+
+</article>
+
+<footer><a href='tutorial7.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial9.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Out.Real(Math.sin(Math.pi), 0)', 'Out.Real(Math.cos(Math.pi), 0)'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>

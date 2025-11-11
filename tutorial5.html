@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>На предыдущих страницах команды выводили в журнал только непосредственные значения, что, разумеется, само по себе не очень полезно, ведь непосредственное значение и так очевидно. Необходимость в выводе появляется, когда имеются не известные напрямую значения.
+  </p>
+
+  <p>Простейшим примером такого значения является именованная константа. Именованная константа — это ещё один тип объявлений модуля вдобавок к процедурам. Также, как и процедуры, константы доступны через имя модуля, в котором они объявлены, и имя самой константы. Например, в стандартном модуле Math находится знаменитая математическая константа <b>π</b> (пи), но записанная через латиницу.</p>
+
+  <div id='vostokbox-button-runners'></div>
+
+  <div id='vostokbox-log'></div>
+  <div id='vostokbox-runners'></div>
+
+ <p>Выведите в журнал ещё одну важную математическую константу — <b>e</b>, основание натурального логарифма. Её объявление есть в том же модуле.</p>
+
+</article>
+
+<footer><a href='tutorial4.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial6.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Out.Real(Math.pi, 0)'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>

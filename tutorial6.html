@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Наиболее интересной частью программирования является получение новых значений. Их можно получить с помощью выражений.</p>
+  <p>Для целых чисел доступны хорошо известные по школьной математике операции над двумя числами: сложение «<code>+</code>», вычитание «<code>-</code>», умножение «<code>*</code>», деление нацело «<code>DIV</code>» и остаток от деления «<code>MOD</code>». Оба операнда должны быть целыми числами, не допускается смешивания в операциях чисел разных типов.</p>
+
+  <div id='vostokbox-button-runners'></div>
+  <div id='vostokbox-log'></div>
+
+  <div id='vostokbox-runners'></div>
+
+  <p>Доступны также одноместные операции — «<code>-</code>», «<code>+</code>», существующие из эстетических соображений. Они не добавляют никаких возможностей и только являются сокращениями для аналогичных выражений, где первым операндом является <code>0</code>. То есть «<code>-7</code>» и «<code>+3</code>» это то же самое, что и «<code>0 - 7</code>» и «<code>0 + 3</code>».  И если «<code>-</code>» хотя бы позволяет поменять знак числа, то одноместный «<code>+</code>» существует лишь заодно.</p>
+
+  <p>Обратите внимание на особенность, которая из этого следует. В Oberon знак не является частью числа. «<code>-1</code>» — это не число, а простое выражение, состоящее из знака вычитания (из <code>0</code>) и положительной единицы. И только значение этого выражения равно отрицательной единице.</p>
+
+  <p>Целочисленное деление проходят в начальной школе, но потом нередко забывают, переходя к вещественным числам. В программировании же целочисленное деление имеет большое значение, а по смыслу несколько отличается от вещественного, не сводясь к округлению частного.</p>
+
+  <p>Поупражняйтесь в составлении арифметических выражений над небольшими целыми.</p>
+
+</article>
+
+<footer><a href='tutorial5.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial7.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Out.Int(7 + 3, 6)', 'Out.Int(7 - 3, 6)', 'Out.Int(7 * 3, 6)', 'Out.Int(7 DIV 3, 6)', 'Out.Int(7 MOD 3, 6)', 'Out.Int(- 7, 0)', 'Out.Int(+3, 0)'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>

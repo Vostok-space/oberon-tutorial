@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+
+<script src='https://ajaxorg.github.io/ace-builds/src/ace.js'
+        type='text/javascript' charset='utf-8'></script>
+<script src='https://ajaxorg.github.io/ace-builds/src/ext-language_tools.js'
+        type='text/javascript' charset='utf-8'></script>
+<script src='ace-oberon.js'         type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+<style>
+  .vostokbox-editor { width:40%; height:14em; }
+  details { user-select:none; }
+  #vostokbox-log { resize:none; }
+</style>
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Повторите рассмотренный пример модуля, набрав его в редакторе. Если необходимо, можете раскрыть образец. Используйте кнопку <code>My</code> для проверки модуля в промежуточном состоянии, и кнопку <code>My.Go</code> для запуска процедуры в готовом модуле. Для ввода заглавных букв подряд удобно использовать клавишу Caps Lock.</p>
+
+<details><summary>образец</summary>
+<pre><code>MODULE My;
+
+ IMPORT Out;
+
+ PROCEDURE Go*;
+ BEGIN
+  Out.String("Привет всем!")
+ END Go;
+
+END My.</code></pre></details>
+
+<div>
+  <div class='vostokbox-editor'></div>
+  <div id='vostokbox-log'></div>
+</div>
+  <div id='vostokbox-button-runners'></div>
+
+<p>По аналогии добавьте в модуль вторую процедуру — Do, и запустите её с помощью соответствующей кнопки.</p>
+  
+</article>
+
+<br/>
+<br/>
+<footer><a href='tutorial10.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial12.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, ace, {
+    buttonRunners: ['My', 'My.Go', 'My.Do'],
+    runners: [],
+    storage: false,
+    aceOptions: {editor:{}}
+  });
+</script>
+
+</body>
+</html>

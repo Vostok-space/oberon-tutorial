@@ -1,0 +1,36 @@
+div.page { margin: auto; max-width: 700px; padding: 1px 20px 20px 20px; }
+
+#vostokbox-log { height:130px; }
+
+p { hyphens: auto; text-align: justify; }
+
+code { font-size: 1.1em; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button { margin: 1px; }
+
+@media (max-width: 500px) {
+  div.page { padding  : 1px 6px 6px; }
+}
+@media (max-width: 400px) {
+  div.page { padding  : 1px 3px 3px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background-color:#000; }
+  div.page { background-color:#222; }
+  pre, pre code, p code { color:white; background-color:#2A2A2A; }
+}
+@media (prefers-color-scheme: light) {
+  body { background-color:#666; }
+  div.page { background-color:white; color: #282828; }
+  pre, pre code, p code { color:#000; background-color:#F8F8F8; }
+  button { background-color:#DDD; }
+}
+
+.vostokbox-log-out { background-color:inherit; }

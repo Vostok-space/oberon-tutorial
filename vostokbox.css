@@ -1,0 +1,97 @@
+body { margin: 1px; }
+
+.vostokbox-editor {
+  width: min(100%, 614px);
+  height: 75vh;
+  float: left;
+  font-size: 14px;
+  white-space: pre;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  resize: both;
+}
+
+.inactive { display: none; }
+
+button {
+  border-radius: 3px;
+  border: 1px solid;
+  color: inherit;
+  transition: 0.2s;
+}
+
+#vostokbox-tabs button {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 3px 12px;
+  white-space: pre;
+}
+
+#vostokbox-log {
+  min-width: 320px;
+  height: 75vh;
+  overflow: auto;
+  resize: vertical;
+}
+
+.vostokbox-log-script {
+  padding: 2px 4px;
+  border-radius: 6px;
+  margin: 2px 3px;
+}
+
+a { color: inherit; }
+
+.vostokbox-log-script:hover, .vostokbox-button-runner:hover {
+  text-decoration: underline;
+}
+
+.vostokbox-log-out, .vostokbox-log-error  { margin: 4px 3px; }
+
+.vostokbox-command-line input {
+  border: 1px solid;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.vostokbox-command-line {
+  display: inline-flex;
+  width: min(500px, 100%);
+}
+
+.ctrl-up .ctrl, .ctrl-down .no-ctrl { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  body                          { background-color: #333; color: #DDD; }
+  .vostokbox-editor             { background-color: #444; }
+  button                        { background-color: #444; border-color: #333; }
+  button:hover                  { background-color: #555; }
+  .vostokbox-command-line input { border-color: #444; }
+  .vostokbox-command-line input:focus
+                                { background-color: #383838; border-color: #555; }
+  #vostokbox-tabs button        { background-color: #444444; color: #DDD; }
+  #vostokbox-tabs button:hover  { background-color: #555; }
+  #vostokbox-tabs button.active { background-color: #666; color: #EEE; }
+  #vostokbox-log                { background-color: #383838; color: #EEE; }
+  .vostokbox-log-script         { background-color: #555; }
+  .vostokbox-log-error          { color: #FF9090; }
+}
+
+@media (prefers-color-scheme: light) {
+  button                        { background-color: #CCC;  border-color: #DDD; }
+  button:hover                  { background-color: #BBB; }
+  .vostokbox-command-line input { border-color: #CCC; }
+  .vostokbox-command-line input:focus
+                                { background-color: #EEE; border-color: #DDD; }
+  #vostokbox-tabs button        { background-color: #EEE; }
+  #vostokbox-tabs button:hover  { background-color: #D8D8D8; }
+  #vostokbox-tabs button.active { background-color: #DDD; }
+  #vostokbox-log                { background-color: #EEE; }
+  .vostokbox-log-script         { background-color: #DFDFDF; }
+  .vostokbox-log-error          { color: #FF0000; }
+}

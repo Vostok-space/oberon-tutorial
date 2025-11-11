@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Было бы неудобно, если бы выражения были только односложными. Как и в математических формулах выражения в Oberon могут быть составными, объединяя сразу несколько вычислений. Арифметические операции выполняются в соответствии с привычным приоритетом — умножение и деление выполняется раньше сложения и вычитания. Круглые скобки позволяют группировать действия, влияя на очерёдность операций. Операции одного уровня приоритета выполняются слева направо.</p>
+
+  <div id='vostokbox-button-runners'></div>
+  <div id='vostokbox-log'></div>
+
+  <div id='vostokbox-runners'></div>
+
+  <p>Составьте выражение для нахождения среднего значения из чисел <code>-11.3</code>; <code>32.1</code>; <code>4.4</code></p>
+
+</article>
+
+<footer><a href='tutorial8.html'>Назад</a> <a href='tutorial.html'>Начало</a> <a href='tutorial10.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Out.Int(2 + 3 * 4, 0)', 'Out.Int((2 + 3) * 4, 0)', 'Out.Real(Math.power(Math.sin(1.1), 2.0) + Math.power(Math.cos(1.1), 2.0), 0)'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>

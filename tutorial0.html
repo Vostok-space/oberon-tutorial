@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Пособие по Oberon</title>
+
+<link rel='icon' type='image/svg+xml' href='icon.svg'>
+<link rel='stylesheet' type='text/css' href='vostokbox.css'>
+<link rel='stylesheet' type='text/css' href='tutorial.css'>
+<script src='vostokbox-config.js'   type='text/javascript' charset='utf-8'></script>
+<script src='vostokbox.js'          type='text/javascript' charset='utf-8'></script>
+</head>
+
+<body>
+<div class='page'>
+<article>
+  <p>Выполнение кода на языке программирования Oberon запускается командами. Их текст тоже составляется по правилам языка, поэтому команды уже дают некоторое представление о нём. Пример простейшей команды:</p>
+  <div id='vostokbox-button-runners'></div>
+  <p>Нажмите на неё, и в журнал запишется содержимое команды и то, что было выведено в результате его выполнения.</p>
+
+  <div id='vostokbox-log'></div>
+  <div id='vostokbox-runners'></div>
+
+  <p><code>Hello.Come</code> является вызовом процедуры и состоит из имени модуля <code>Hello</code>, разделяющей точки и имени процедуры <code>Come</code>, находящейся в этом модуле. </p>
+
+  <p>Модули — это крайне важное и одновременно очень простое понятие языка Oberon. Это разделы с чёткими границами, содержащие объявления языка, включая процедуры. Прямой доступ к объявлениям конкретного модуля всегда осуществляется через него самого.</p>
+
+  <p>Процедуры — это самая важная разновидность объявлений. Именно в них находятся описания действий, запуск которых может приводить к зримым изменениям (и малозаметным тоже).</p>
+
+  <p>Имена в Oberon регистрозависимы и необходимо строго соблюдать соответствующее написание для обращения к модулям и их объявлениям. <code>Hello</code> и <code>hello</code> — это совершенно разные имена, которые могут указывать на разные сущности.</p>
+
+  <p>В модуле-примере <code>Hello</code> есть ещё одна процедура — <code>Gone</code>. Вызовите её, напечатав в командной строке (поле ввода под <a href='#vostokbox-log'>журналом</a>) вызов процедуры, аналогично примеру, заменив имя процедуры. Запуск можно осуществить либо клавишей Enter, оставаясь в поле ввода, либо нажатием кнопки со значком <b>⏎</b> справа от поля ввода.</p>
+</article>
+
+<footer><a href='tutorial.html'>Назад</a> <a href='tutorial1.html'>Далее</a></footer>
+</div>
+
+<script>
+  VostokBox.createByDefaultIdentifiers(document, {}, {
+    buttonRunners: ['Hello.Come'],
+    runners: [''],
+    storage: false
+  });
+</script>
+
+</body>
+</html>
